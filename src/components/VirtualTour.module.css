@@ -1,0 +1,200 @@
+.zoneTabsWrapper {
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 36px;
+}
+
+.zoneTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: max-content;
+  margin: 0 auto;
+}
+
+.zoneTab {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: rgba(20, 27, 43, 0.6);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.zoneTab:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.zoneTabActive {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: #080b11;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.35);
+}
+
+.zoneTabActive:hover {
+  background: #3bf3ff;
+  color: #080b11;
+}
+
+.showcaseCard {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+@media (max-width: 960px) {
+  .showcaseCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageCol {
+  position: relative;
+  min-height: 440px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.zoneImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.showcaseCard:hover .zoneImage {
+  transform: scale(1.04);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, rgba(14, 19, 30, 0.9) 100%);
+}
+
+@media (max-width: 960px) {
+  .imageOverlay {
+    background: linear-gradient(180deg, transparent 60%, rgba(14, 19, 30, 0.9) 100%);
+  }
+}
+
+.liveBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 11, 17, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.infoCol {
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-card);
+}
+
+@media (max-width: 640px) {
+  .infoCol {
+    padding: 28px 20px;
+  }
+}
+
+.zoneTagline {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
+}
+
+.zoneTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.zoneDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.specsHeader {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.specDot {
+  color: var(--accent-cyan);
+  font-weight: 900;
+}
+
+.facilityPerks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.perk {
+  display: flex;
+  flex-direction: column;
+}
+
+.perk strong {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.perk span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
