@@ -1,0 +1,345 @@
+.calculatorCard {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 960px) {
+  .calculatorCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputsSection {
+  padding: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 640px) {
+  .inputsSection {
+    padding: 24px;
+  }
+}
+
+.topControlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.toggleGroup, .genderGroup {
+  display: flex;
+  background: #0d121c;
+  border: 1px solid var(--border-subtle);
+  padding: 4px;
+  border-radius: var(--radius-md);
+}
+
+.toggleBtn, .genderBtn {
+  padding: 8px 16px;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.toggleBtn:hover, .genderBtn:hover {
+  color: var(--text-primary);
+}
+
+.toggleActive, .genderActive {
+  background: var(--accent-neon);
+  color: #080b11;
+  box-shadow: 0 2px 8px rgba(204, 255, 0, 0.3);
+}
+
+.rangeControl {
+  margin-bottom: 24px;
+}
+
+.rangeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rangeHeader label {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.rangeValue {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.slider {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #101624;
+  border-radius: 4px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-neon);
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--accent-neon);
+  border: 2px solid #080b11;
+  transition: transform var(--transition-fast);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.imperialRow {
+  display: flex;
+  gap: 16px;
+}
+
+.controlLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.goalControl {
+  margin-bottom: 24px;
+}
+
+.goalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 500px) {
+  .goalGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goalBtn {
+  padding: 12px 14px;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: #111724;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.goalBtn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+.goalActive {
+  background: rgba(204, 255, 0, 0.12);
+  border-color: var(--accent-neon);
+  color: var(--accent-neon);
+}
+
+.activityControl {
+  margin-bottom: 8px;
+}
+
+/* Results Section */
+.resultsSection {
+  background: #0f1522;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .resultsSection {
+    padding: 24px;
+  }
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent-neon);
+  margin-bottom: 24px;
+}
+
+.bmiDialBox {
+  background: rgba(20, 27, 43, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.bmiNumber {
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.bmiClassification {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.gaugeBar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.gaugeUnderweight {
+  flex: 1.85;
+  background: #00e5ff;
+}
+
+.gaugeNormal {
+  flex: 3;
+  background: #00f59b;
+}
+
+.gaugeOverweight {
+  flex: 2.5;
+  background: #ffaa00;
+}
+
+.gaugeObese {
+  flex: 2.65;
+  background: #ff3366;
+}
+
+.gaugeNeedle {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #ffffff;
+  transform: translateX(-50%);
+  transition: left 0.4s ease;
+}
+
+.gaugeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+}
+
+.targetGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.targetBox {
+  background: rgba(20, 27, 43, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+.targetLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.targetValue {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.targetHint {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.recommendationCard {
+  background: rgba(204, 255, 0, 0.06);
+  border: 1px solid rgba(204, 255, 0, 0.25);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+}
+
+.recTag {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-neon);
+  margin-bottom: 6px;
+}
+
+.recTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.recDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}

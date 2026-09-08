@@ -1,0 +1,259 @@
+.footer {
+  background: #06090e;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.newsletterStrip {
+  background: rgba(14, 20, 32, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 60px 0;
+}
+
+.newsletterContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 36px;
+}
+
+@media (max-width: 900px) {
+  .newsletterContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletterTag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-neon);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.newsletterTitle {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.newsletterDesc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 500px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 14px 18px;
+  background: #111724;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.newsletterInput:focus {
+  border-color: var(--accent-neon);
+  box-shadow: 0 0 0 3px rgba(204, 255, 0, 0.15);
+}
+
+.mainFooter {
+  padding: 80px 24px 40px 24px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.3fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(204, 255, 0, 0.12);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.logoIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brandBio {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.socialRow {
+  display: flex;
+  gap: 14px;
+}
+
+.socialLink {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border-bottom: 1px solid transparent;
+}
+
+.socialLink:hover {
+  color: var(--accent-neon);
+  border-bottom-color: var(--accent-neon);
+}
+
+.colHeading {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-neon);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkList li a {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.linkList li a:hover {
+  color: #fff;
+  padding-left: 4px;
+}
+
+.hoursBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hourItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hourDay {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.hourTime {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contactIcon {
+  font-size: 1rem;
+}
+
+.transitBadge {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.bottomBar {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.legalLinks a:hover {
+  color: #fff;
+}

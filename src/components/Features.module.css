@@ -1,0 +1,96 @@
+.featureCard {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.featureCard:hover::before {
+  background: linear-gradient(90deg, var(--accent-neon), var(--accent-cyan));
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(204, 255, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(204, 255, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.featureIconBox {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.featureIconBox svg {
+  width: 28px;
+  height: 28px;
+}
+
+.featureCard:hover .featureIconBox {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.cardBadge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.cardDesc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.cardFooter {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.highlightPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.checkIcon {
+  color: var(--accent-neon);
+  font-weight: 900;
+}
